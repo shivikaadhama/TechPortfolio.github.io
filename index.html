@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Tech Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <nav>
     <div class="logo">MY PORTFOLIO</div>
-    <ul>
-        <li><a href="#header">About Me</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#header">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact Me</a></li>
     </ul>
-</nav>
+  </nav>
   
   <header id="header" class="dimensional-section">
     <div class="header-content">
@@ -28,7 +30,7 @@
       <p>Explore my work and join me in this ever-evolving digital adventure!</p>
     </div>
     <div class="image-content">
-      <img src="profile.jpg" alt="Profile Picture">
+      <img src="profile.jpg" alt="Profile Picture" />
       <a href="RESUME.pdf" download="Shivika_Dhama_Resume.pdf" class="resume-btn">Download Resume</a>
     </div>
   </header>
@@ -76,28 +78,37 @@
     </div>
   </section>
 
-  <section id="contact" >
-      <h2>Contact Me</h2>
-      <div class="contact-container">
-        <div class="contact-item">
-          <span>📧</span> <a href="mailto:shivikadhama25@gmail.com">shivikadhama25@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span>🔗</span> <a href="https://www.linkedin.com/in/shivika-dhama-b54561256/" target="_blank">LinkedIn</a>
-        </div>
-        <div class="contact-item">
-          <span>🐙</span> <a href="https://github.com/shivikaadhama" target="_blank">GitHub</a>
-        </div>
-        <div class="contact-item">
-          <span>📞</span> <a href="tel:+9540070312">Mobile</a>
-        </div>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <div class="contact-item">
+        <span>📧</span> <a href="mailto:shivikadhama25@gmail.com">shivikadhama25@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <span>🔗</span> <a href="https://www.linkedin.com/in/shivika-dhama-b54561256/" target="_blank">LinkedIn</a>
+      </div>
+      <div class="contact-item">
+        <span>🐙</span> <a href="https://github.com/shivikaadhama" target="_blank">GitHub</a>
+      </div>
+      <div class="contact-item">
+        <span>📞</span> <a href="tel:+9540070312">Mobile</a>
       </div>
     </div>
   </section>
+
   <footer>
     <p>Designed & Developed by Shivika Dhama | Web Developer | © 2025</p>
-</footer>
+  </footer>
 
-  <script src="script.js"></script>
+  <!-- Hamburger Menu Script -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
 </body>
 </html>
