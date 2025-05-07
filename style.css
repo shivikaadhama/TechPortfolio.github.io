@@ -1,4 +1,10 @@
 /* General Reset */
+:root {
+  --primary-color: #5ac18e;
+  --bg-gradient: linear-gradient(135deg, #0F2027, #2C5364);
+  --footer-gradient: linear-gradient(120deg, #1a2a3a, #000);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -20,6 +26,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden; /* Prevent horizontal scroll */
 }
+
 /* Navigation Bar */
 nav {
   position: static;
@@ -41,7 +48,7 @@ nav {
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 0 0 10px rgba(90, 193, 142, 0.5);
+  text-shadow: 0 2px 6px rgba(90, 193, 142, 0.2);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -73,6 +80,11 @@ nav ul li a {
   position: relative;
 }
 
+nav ul li a:hover {
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 6px;
+}
+
 nav ul li a::after {
   content: "";
   width: 0%;
@@ -93,6 +105,51 @@ nav a.active {
   color: #5ac18e;
   font-weight: bold;
 }
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+  z-index: 2000;
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #1a2a3a;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    gap: 20px;
+    padding: 20px 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li a {
+    padding: 12px;
+    display: block;
+  }
+}
+
 /* About Me Section */
 .about-section {
   display: flex;
@@ -341,12 +398,6 @@ footer {
   color: #5ac18e;
 }
 
-footer a {
-  color: #5ac18e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
 /* Equal Spacing Between Sections */
 section {
   padding: 60px 0;
@@ -362,7 +413,5 @@ footer {
   color: #5ac18e;
 }
 
-footer p {
-  margin: 0;
-  font-weight: 500;
-}
+
+
