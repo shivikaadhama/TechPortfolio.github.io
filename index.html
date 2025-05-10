@@ -3,61 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Tech Portfolio</title>
+  <title>Shivika's Profile</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <nav>
-    <div class="logo">MY PORTFOLIO</div>
-    <div class="hamburger" id="hamburger"></div> <!-- Hamburger icon -->
+    <div class="logo">Shivika</div>
+    <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
     <ul class="nav-links" id="nav-links">
-      <li><a href="#header">About Me</a></li>
+      <li class="close-btn" id="close-btn">&times;</li>
+      <li><a href="#profile">About Me</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact Me</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
   
-  <header id="header" class="dimensional-section">
-    <div class="header-content">
-      <h1>Shivika Dhama</h1>
+  <header id="profile" class="profile-section">
+    <h1 class="profile-head">About Me</h1>
+    <div class="profile-content">
+      <div class="image-content">
+        <img src="profile.jpg" alt="Profile Picture" />
+        <a href="RESUME.pdf" download="Shivika_Dhama_Resume.pdf" class="resume-btn">Download Resume</a>
+      </div>
+      <div class="profile-para">
       <p>Welcome to my creative space!</p>
-      <p>I'm Shivika Dhama, a web developer on a continuous journey of learning</p>
-      <p>and innovation. I love crafting high-performance, visually engaging websites</p>
-      <p>that blend clean code with seamless user experiences. With each project,</p>
-      <p>I refine my skills, explore new technologies, and push boundaries.</p>
-      <p>Explore my work and join me in this ever-evolving digital adventure!</p>
-    </div>
-    <div class="image-content">
-      <img src="profile.jpg" alt="Profile Picture" />
-      <a href="RESUME.pdf" download="Shivika_Dhama_Resume.pdf" class="resume-btn">Download Resume</a>
+
+        <p>
+        I'm Shivika Dhama, a web developer on a continuous journey of learning and innovation. I love crafting high-performance, visually engaging websites that blend clean code with seamless user experiences. With each project, I refine my skills, explore new technologies, and push boundaries.Explore my work and join me in this ever-evolving digital adventure!
+        </p>
+      </div>
     </div>
   </header>
 
-  <section class="dimensional-section" id="skills">
+  <section id="skills" class="dimensional-section">
     <div class="content">
       <h2>My Skills</h2>
-      <div class="skills-container">
-        <div class="skill-card">
+      <div class="experience-container">
+        <div class="experience-card">
           <h3>Web Development</h3>
-          <p>HTML, CSS, JavaScript, React</p>
-        </div>
-        <div class="skill-card">
+          <p>HTML, CSS, JavaScript</p>
+         </div>
+        <div class="experience-card">
           <h3>AI & Machine Learning</h3>
           <p>Python, TensorFlow, Scikit-learn</p>
+          
         </div>
-        <div class="skill-card">
+        <div class="experience-card">
           <h3>UI/UX Design</h3>
           <p>Figma, Adobe XD, Design Principles</p>
+          
         </div>
       </div>
     </div>
   </section>
 
-  <section class="dimensional-section" id="projects">
+  
+
+  <section id="projects" class="dimensional-section">
     <div class="content">
-      <h2>My Projects</h2>
+      <h2> My Projects</h2>
       <div class="projects-container">
         <div class="project-card">
           <h3>AI Chatbot</h3>
@@ -78,7 +84,7 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="dimensional-section">
     <h2>Contact Me</h2>
     <div class="contact-container">
       <div class="contact-item">
@@ -104,9 +110,14 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+    const closeBtn = document.getElementById('close-btn');
 
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navLinks.classList.remove('show');
     });
   </script>
 
