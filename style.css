@@ -122,6 +122,12 @@ nav a.active {
 }
 
 @media (max-width: 768px) {
+  nav {
+    display: block; /* or flex/grid depending on layout */
+  }
+}
+
+@media (max-width: 768px) {
   .close-btn {
     display: block;
     /* Show close button on mobile */
