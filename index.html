@@ -114,5 +114,19 @@
 
   <!-- Hamburger Menu Script -->
 
+   <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    const closeBtn = document.getElementById('close-btn');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+    });
+  </script>
+  
 </body>
 </html>
