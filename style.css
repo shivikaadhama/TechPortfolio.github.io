@@ -1,7 +1,6 @@
 /* General Reset */
 :root {
   --primary-color: #5ac18e;
-  --bg-gradient: linear-gradient(135deg, #0F2027, #2C5364);
   --footer-gradient: linear-gradient(120deg, #1a2a3a, #000);
 }
 
@@ -14,7 +13,7 @@
 
 /* Body and Background */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display';
   background: var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
@@ -28,7 +27,7 @@ body {
 
 /* Navigation Bar */
 nav {
-  position: fixed;
+  position: relative;
   top: 0;
   width: 100%;
   background: linear-gradient(120deg, #1a2a3a, #000);
@@ -40,19 +39,19 @@ nav {
 }
 
 .logo {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.8rem;
+  font-family: 'Playfair Display';
+  font-size: 2rem;
   font-weight: bold;
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-shadow: 0 2px 6px rgba(90, 193, 142, 0.2);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.5s ease, opacity 0.3s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+  transform: scale(1.2);
+  opacity: 0.6;
 }
 
 nav ul {
@@ -68,12 +67,12 @@ nav ul li {
 }
 
 nav ul li a {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-family: 'Playfair Display';
+  font-size: 1.3rem;
   color: white;
   text-decoration: none;
   padding: 10px 15px;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
   position: relative;
 }
 
@@ -105,7 +104,7 @@ nav a.active {
 /* Hamburger Menu */
 .hamburger {
   display: none;
-  font-size: 2rem;
+  font-size: 3rem;
   cursor: pointer;
   color: white;
 }
@@ -137,8 +136,9 @@ nav a.active {
   }
 
   .project-card {
-    width: 80%;
+    width: 90%;
     margin-bottom: 20px;
+
   }
 }
 
@@ -149,7 +149,7 @@ nav a.active {
   }
 
   .project-card {
-    width: 90%;
+    width: 95%;
     margin-bottom: 20px;
   }
 }
@@ -168,68 +168,67 @@ nav a.active {
 
 /* Profile Section */
 .profile-section {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 120px 10%;
+  padding: 60px 10px;
   background: radial-gradient(circle at top, #1a2a3a, #000);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'playfair display';
   color: #5ac18e;
 }
 
 .profile-head {
   font-size: 3.5rem;
   font-weight: bold;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
 }
 
 .profile-content {
   display: flex;
   align-items: center;
   width: 100%;
-  gap: 40px;
+  gap: 20px;
 }
 
 .image-content {
-  flex: 1;
+  flex: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
 }
 
 .image-content img {
   width: 220px;
   height: auto;
+  border: 3px solid var(--primary-color);
   border-radius: 15px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-  object-fit: cover;
+  object-fit: 100%;
 }
 
 .resume-btn {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 20px 25px;
   background-color: var(--primary-color);
   color: #000;
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
-  transition: background 0.3s ease;
+  transition: background 0.5s ease;
 }
 
 .resume-btn:hover {
-  background-color: #4fa374;
+  background-color: #7ae1a7;
 }
 
 .profile-para {
-  flex: 2;
-  font-size: 1.1rem;
-  line-height: 1.6;
+  flex: 1.7;
+  font-size: 1.5rem;
+  line-height: 1.4;
   text-align: left;
   color: #f0f0f0;
 }
@@ -238,14 +237,12 @@ nav a.active {
 .dimensional-section {
   padding: 60px 10%;
   background: linear-gradient(120deg, #2a0845, #6441a5);
-  border-radius: 15px;
-  margin: 40px 0;
   color: #fff;
 }
 
 .dimensional-section h2 {
-  font-size: 2.8rem;
-  margin-bottom: 30px;
+  font-size: 3rem;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 4px;
   color: var(--primary-color);
@@ -253,77 +250,79 @@ nav a.active {
 }
 
 .experience-container,
-.education-container {
+.experience-cards {
   display: flex;
+  font-family: 'playfair display';
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
 }
 
 .experience-card,
-.education-card {
+.experience-cards {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 25px;
+  padding: 35px;
   width: 45%;
-  backdrop-filter: blur(5px);
   transition: transform 0.3s ease;
 }
 
-.experience-card:hover,
-.education-card:hover {
-  transform: scale(1.05);
+.experience-card:hover {
+  transform: scale(1.2);
 }
 
-.experience-card h3,
-.education-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+.experience-card h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
   color: #fff;
 }
 
-.experience-card p,
-.education-card p {
-  font-size: 1rem;
+.experience-card p{
+  font-size: 1.2rem;
   line-height: 1.5;
   color: #ddd;
 }
 
-/* Contact Section */
-#contact {
-  background: linear-gradient(135deg, #0F2027, #2C5364);
-  padding: 60px 10%;
-  text-align: center;
-  margin: 40px 0;
-  border-radius: 15px;
+/* Projects Section */
+.projects-section {
+  padding: 50px 10%;
+  background: linear-gradient(120deg, #c73c4a, #8e1c33);
   color: #fff;
 }
 
-/* Projects Section */
+.projects-section h2 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  letter-spacing: 4 px;
+  color: #fff;
+  text-align: center;
+}
+
 .projects-container {
   display: flex;
+  font-family: 'playfair display';
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 32px;
 }
 
 .project-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 25px;
-  width: 30%;
-  backdrop-filter: blur(5px);
+  padding: 50px;
+  width: 31%;
   transition: transform 0.3s ease;
   color: #fff;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.2);
 }
 
 .project-card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 10px;
   color: #fff;
 }
 
@@ -346,41 +345,54 @@ nav a.active {
 }
 
 .project-link:hover {
-  background-color: #c73c4a;
+  background-color: #d73041;
   color: whitesmoke;
+}
+
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #0F2027, #2C5364); 
+  text-align: center;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
 }
 
 .contact-container {
   max-width: 800px;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 60px; 
 }
 
 .contact-container a {
-  color: var(--primary-color);
+  color: var(--primary-color); 
   font-size: 1.2rem;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  position: relative;
+  transition: all 0.3s ease;
 }
 
 .contact-container a:hover {
-  color: #3a8e6a;
-  text-decoration: underline;
+  transform: scale(1.05);
+  color: #3a8e6a; 
 }
 
 /* Footer Styling */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
   background: var(--footer-gradient);
   font-size: 1rem;
   color: var(--primary-color);
-  border-radius: 0 0 15px 15px;
 }
 
 /* Responsive Design */
@@ -476,3 +488,4 @@ footer {
   to {
     opacity: 1;
   }
+}
